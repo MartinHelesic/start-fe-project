@@ -1,0 +1,22 @@
+{
+  "name": "start-project",
+  "version": "1.0.0",
+  "description": "Starter project for new projects",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^9.7.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Helešic",
+  "license": "MIT"
+}
