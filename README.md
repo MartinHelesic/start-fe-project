@@ -1,15 +1,19 @@
+## Requirements
+* [Node.js](https://nodejs.org) 
+
 # start-fe-project
--> Starter pack for front-end developers and included:
+-> Starter pack for front-end developers. It includes:
 
 [HTML5 boilerplate](https://html5boilerplate.com)
 
-[Gulp](https://gulpjs.com)
-[Sass](https://sass-lang.com) gulp-sass
-[Browsersync](https://www.browsersync.io)
 
-[PostCSS](https://github.com/postcss/postcss#articles)(https://github.com/postcss/gulp-postcss)
-[Gulp-Sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps)
-[Autoprefixer](https://github.com/postcss/autoprefixer#gulp)
+[Gulp](https://gulpjs.com),
+[Sass](https://sass-lang.com),
+[Browsersync](https://www.browsersync.io),
+
+[PostCSS](https://github.com/postcss/postcss#articles)(https://github.com/postcss/gulp-postcss),
+[Gulp-Sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps),
+[Autoprefixer](https://github.com/postcss/autoprefixer#gulp),
 
 # Start with
 git clone URL this-project
@@ -17,6 +21,7 @@ git clone URL this-project
 -> You can delete "doc" folder which contents information about settings of HTML5 boilerplate
 
 npm install 
+
 gulp
 
 -> Change backgound color in ./assets/styles.scss to generate css 
