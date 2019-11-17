@@ -9,12 +9,15 @@
 
 [Gulp](https://gulpjs.com),
 [Sass](https://sass-lang.com),
-[Browsersync](https://www.browsersync.io),
+[Browsersync](https://www.browsersync.io)
 
 
 [PostCSS](https://github.com/postcss/postcss#articles)(https://github.com/postcss/gulp-postcss),
 [Gulp-Sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps),
-[Autoprefixer](https://github.com/postcss/autoprefixer#gulp),
+[Autoprefixer](https://github.com/postcss/autoprefixer#gulp)
+
+
+[Bootstrap](https://getbootstrap.com)
 
 # Start with
 git clone URL this-project

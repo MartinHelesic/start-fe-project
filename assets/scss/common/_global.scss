@@ -1,8 +1,12 @@
 body{
-    text-align: center;
-    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+                        //change color here ˇ
+    background: linear-gradient(to bottom, purple, orange);
     height: 100vh;
-    margin: auto;
+    margin: 0 auto;
+    text-align: center;
     color: white;
-    background: linear-gradient(to bottom, purple, blue);
 }

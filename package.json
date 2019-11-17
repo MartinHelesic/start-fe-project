@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "autoprefixer": "^9.7.1",
+    "bootstrap": "^4.3.1",
     "gulp-cli": "^2.2.0",
     "gulp-sourcemaps": "^2.6.5"
   },
