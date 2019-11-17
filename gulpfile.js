@@ -20,7 +20,8 @@ function style(){
         .pipe(postcss(
             [ autoprefixer() ]
             ))
-        .pipe(sourcemaps.write('.'))
+        // By default, gulp-sourcemaps writes the source maps inline in the compiled CSS files.
+        .pipe(sourcemaps.write())
     // 3. where do I save compiled CSS
         .pipe(gulp.dest('./www/css'))
     // 4. stream changes to all browsers
