@@ -1,12 +1,24 @@
 const gulp = require('gulp');
+const {series} =require('gulp');
+
+//CSS
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 
+//JS
+const rollup = require('rollup');
+const resolve = require('rollup-plugin-node-resolve');
+const babel = require('rollup-plugin-babel');
+
+//IMGs
+const imagemin = require('gulp-imagemin');
+
 const STYLE_PATH = './assets/scss/**/*.scss';
+const IMAGES_PATH = './assets/images/*';
+
 
 
 // compile scss into css
@@ -28,18 +40,55 @@ function style(){
         .pipe(browserSync.stream());
 }
 
-function watch(){
+
+
+//Scripts serves rollup https://rollupjs.org
+function jscripts() {
+    return rollup.rollup({
+        input: './assets/scripts/main.js',
+        output: {
+            file: 'bundle.js',
+            format: 'esm'
+        },
+        plugins: [
+            resolve(),
+            babel({
+                exclude: 'node_modules/**' // only transpile our source code
+            })
+        ]
+    }).then(bundle => {
+        return bundle.write({
+            file: './www/js/main.js',
+            format: 'esm',
+            name: 'library',
+            sourcemap: true
+        });
+    });
+}
+
+function images() {
+    return gulp.src(IMAGES_PATH)
+        .pipe(imagemin())
+        .pipe(gulp.dest('./www/img'))
+}
+
+function watch() {
     browserSync.init({
-        server:{
+        server: {
             baseDir: './www/'
         }
     });
-    gulp.watch(STYLE_PATH, style);
+    gulp.watch(STYLE_PATH).on('change', series(style, browserSync.reload));
+    gulp.watch(IMAGES_PATH, images(), browserSync.reload);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
-    gulp.watch('./js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('./assets/scripts/**/*.js').on('change', series(jscripts, browserSync.reload));
 }
 
+
+
 // exports.style = style;
+// exports.images = images;
+// exports.jscripts = jscripts;
 // exports.watch = watch;
 
 exports.default = watch;
