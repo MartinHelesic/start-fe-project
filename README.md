@@ -1,6 +1,8 @@
+## Not WORK right now
+
 ## Requirements
 * [Node.js](https://nodejs.org) 
-TEST TEST
+
 # start-fe-project
 -> Starter pack for front-end developers. 
 
@@ -13,7 +15,7 @@ Which includes:
 * [Gulp-Sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps)
 * [Autoprefixer](https://github.com/postcss/autoprefixer#gulp)
 * [Bootstrap](https://getbootstrap.com)
-
+* 
 # Start with
 git clone https://github.com/VeCZernicek/start-fe-project.git name-this-project
 
