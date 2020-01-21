@@ -1,10 +1,11 @@
-// import "popper.js";
-// import 'bootstrap/js/dist/util';
-// import 'bootstrap/js/dist/modal';
-// import 'bootstrap/js/dist/dropdown';
-// import 'bootstrap/js/dist/collapse';
+import popper from "popper.js";
+import 'bootstrap/js/dist/util';
+import 'bootstrap/js/dist/modal';
+import 'bootstrap/js/dist/dropdown';
+import 'bootstrap/js/dist/collapse';
 
-import "bootstrap";
+//hack for popper 
+window.popper = popper;
 
 //import local dependencies
 import Router from './util/Router.js';

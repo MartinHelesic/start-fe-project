@@ -1,5 +1,3 @@
-## Not WORK right now
-
 ## Requirements
 * [Node.js](https://nodejs.org) 
 

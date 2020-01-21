@@ -37,7 +37,7 @@ function style(){
     // 3. where do I save compiled CSS
         .pipe(gulp.dest('./www/css'))
     // 4. stream changes to all browsers
-        .pipe(browserSync.stream());
+        //.pipe(browserSync.stream());
 }
 
 
